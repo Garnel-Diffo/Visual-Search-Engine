@@ -1,0 +1,30 @@
+{
+  "color_histogram": {
+    "dim": 48,
+    "extract_time_s": 63.99223494529724,
+    "ms_per_image": 11.870197541327627,
+    "precision_at_5": 0.18580000000000002,
+    "precision_at_10": 0.1697
+  },
+  "resnet18": {
+    "dim": 512,
+    "extract_time_s": 905.0530769824982,
+    "ms_per_image": 167.88222537237954,
+    "precision_at_5": 0.5992,
+    "precision_at_10": 0.5744000000000001
+  },
+  "mobilenet_v3_large": {
+    "dim": 960,
+    "extract_time_s": 301.05267810821533,
+    "ms_per_image": 55.84356856023285,
+    "precision_at_5": 0.612,
+    "precision_at_10": 0.5859
+  },
+  "resnet50": {
+    "dim": 2048,
+    "extract_time_s": 1749.7585711479187,
+    "ms_per_image": 324.5703155533146,
+    "precision_at_5": 0.6480000000000001,
+    "precision_at_10": 0.6260999999999999
+  }
+}

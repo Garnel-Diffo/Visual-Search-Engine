@@ -29,8 +29,9 @@ export default function Footer() {
             {" "}- Filière : <span className="font-medium">AIA-4</span>
           </p>
           <p>
-            UE : <span className="font-medium">IA et applications</span>
-            {" "}- Supervisé par : <span className="font-medium">M. Omgba Btha</span>
+            Ecole : <span className="font-medium">ENSPY</span>
+            {" "}- UE : <span className="font-medium">IA et applications</span>
+            {" "}- Supervisé par : <span className="font-medium">M. Omgba Bitha</span>
           </p>
         </div>
       </div>

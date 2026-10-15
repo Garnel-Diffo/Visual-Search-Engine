@@ -1,6 +1,8 @@
 # Visual-Search-Engine
 
 > Dépôt GitHub : [Garnel-Diffo/Visual-Search-Engine](https://github.com/Garnel-Diffo/Visual-Search-Engine)
+>
+> Application en ligne (Vercel) : [visual-search-engine-theta.vercel.app](https://visual-search-engine-theta.vercel.app/)
 
 Moteur de recherche visuelle par similarité d'images, basé sur des **représentations
 vectorielles (embeddings) extraites par un réseau de neurones convolutif pré-entraîné**
@@ -13,8 +15,9 @@ Le projet est composé de trois parties :
 - **`backend/`** - API REST Flask (déployée sur Render) qui encode une image envoyée par
   l'utilisateur et retrouve les articles les plus similaires du catalogue, avec les
   métadonnées stockées dans PostgreSQL (Neon).
-- **`frontend/`** - Application web Next.js (déployée sur Vercel) consommant l'API : upload
-  d'image, catalogue, pages de détail avec articles similaires.
+- **`frontend/`** - Application web Next.js (déployée sur Vercel :
+  [visual-search-engine-theta.vercel.app](https://visual-search-engine-theta.vercel.app/))
+  consommant l'API : upload d'image, catalogue, pages de détail avec articles similaires.
 
 ---
 
@@ -317,6 +320,8 @@ Dossier : [`frontend/`](frontend/)
 
 Application Next.js 16 (App Router, TypeScript, Tailwind CSS v4, React 19).
 
+🌐 **Version déployée** : [https://visual-search-engine-theta.vercel.app/](https://visual-search-engine-theta.vercel.app/)
+
 ```
 frontend/
 ├── src/
@@ -358,6 +363,9 @@ L'application démarre sur **http://localhost:3000**.
 ---
 
 ## 6. Test complet en local
+
+> Pour essayer l'application sans rien installer, ouvrir directement la version déployée :
+> [visual-search-engine-theta.vercel.app](https://visual-search-engine-theta.vercel.app/).
 
 1. Démarrer le backend (port 5000) - voir [4.4](#44-installation-et-lancement-local)
 2. Démarrer le frontend (port 3000) - voir [5.2](#52-installation-et-lancement-local)
@@ -413,7 +421,7 @@ Le `.gitignore` exclut déjà : `.venv/`, `node_modules/`, `.env*` (sauf `.env.e
    `backend/.env`) :
    - `FLASK_ENV` = `production`
    - `DATABASE_URL` = *(votre chaîne de connexion Neon, voir `backend/.env`)*
-   - `CORS_ORIGINS` = *(URL Vercel de votre frontend, ex : `https://visual-search-engine.vercel.app`)*
+   - `CORS_ORIGINS` = *(URL Vercel de votre frontend, ici : `https://visual-search-engine-theta.vercel.app`)*
    - `DEFAULT_TOP_K` = `12`
    - `MAX_TOP_K` = `50`
    - `MAX_UPLOAD_SIZE_MB` = `8`
@@ -432,9 +440,10 @@ Le `.gitignore` exclut déjà : `.venv/`, `node_modules/`, `.env*` (sauf `.env.e
    - `NEXT_PUBLIC_API_URL` = `https://<votre-service>.onrender.com` (URL du backend Render,
      **sans** slash final)
 4. Déployer. Une fois en ligne, vérifier que `/`, `/catalog`, `/catalog/[id]` et la recherche
-   par image fonctionnent.
+   par image fonctionnent. L'application est disponible à l'adresse :
+   **[https://visual-search-engine-theta.vercel.app/](https://visual-search-engine-theta.vercel.app/)**
 5. **Important** : revenir sur Render et mettre à jour `CORS_ORIGINS` avec l'URL Vercel finale
-   (ex : `https://visual-search-engine.vercel.app`), puis redéployer le backend.
+   (`https://visual-search-engine-theta.vercel.app`), puis redéployer le backend.
 
 ---
 
